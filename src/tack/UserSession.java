@@ -2,12 +2,12 @@ package tack;
 
 public class UserSession {
 	private User user;
-	private TackDatabase db;
+	private TackServer server;
 
 	// assumes valid username, good login
-	public UserSession(String username, TackDatabase db) {
-		this.db = db;
-		this.user = db.userFromUsername(username);
+	public UserSession(String username, TackServer server) {
+		this.server = server;
+		this.user = server.userFromUsername(username);
 	}
 
 	public boolean postTack(Tack t) {
