@@ -29,10 +29,22 @@ public class User {
 
 	/** Creates an XML representation of a user's data. */
 	public String getUserData() {
-		// janky as fuck
-		String toReturn = "<user>";
+		String toReturn = "<user>\n";
 
-		toReturn = toReturn + "<username>" + username + "</username>";
+		toReturn = toReturn + "<username>" + username + "</username>\n";
+		toReturn = toReturn + "<myTacks>" + getTackData() + "</myTacks>\n";
+
+		return toReturn + "</user>";
+	}
+
+	private String getTackData() {
+		String toReturn = "";
+
+		for (Tack t : myTacks) {
+			toReturn = toReturn + "<tack>" + t.getID() + "</tack>\n";
+		}
+
+		return toReturn;
 	}
 
 	public String toString() {
