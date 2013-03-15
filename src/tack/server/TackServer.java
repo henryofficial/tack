@@ -1,5 +1,6 @@
 package tack.server;
 
+/** Handles all database read/writes, as well as non-user-specific actions. */
 public class TackServer {
 	private TackDatabase tackDatabase;
 	private UserDatabase userDatabase;

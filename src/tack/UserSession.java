@@ -1,5 +1,6 @@
 package tack;
 
+/** Handles all requests / posts for a single user's session. */
 public class UserSession {
 	private User user;
 	private TackServer server;
